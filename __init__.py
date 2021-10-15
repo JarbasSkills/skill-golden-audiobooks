@@ -51,7 +51,7 @@ class GoldenAudioBooksSkill(OVOSCommonPlaybackSkill):
             yield self._book2ocp(book, score)
 
     def _book2ocp(self, book, score):
-        author = ", ".join([au.first_name + au.last_name for au in
+        author = " ".join([au.first_name + au.last_name for au in
                             book.authors])
         pl = [{
             "match_confidence": score,
